@@ -5,23 +5,22 @@ class Solution:
         n = []
         i = 0
         while i < len(s):
-            print(i)
-            print(len(s) - 1)
             if i < len(s) - 1:
-                print(roman_numbers[s[i]])
-                print(roman_numbers[s[i + 1]])
+                # if
                 if roman_numbers[s[i]] > roman_numbers[s[i + 1]]:
                     n.append(roman_numbers[s[i]])
-                else:
-                    n.append(roman_numbers[s[i]] * 0.9)
+                elif roman_numbers[s[i]] < roman_numbers[s[i + 1]]:
+                    n.append(roman_numbers[s[i + 1]] - roman_numbers[s[i]])
                     i += 1
+                elif roman_numbers[s[i + 1]]:
+                    n.append(roman_numbers[s[i]])
             else:
-                print('###############')
                 n.append(roman_numbers[s[i]])
-            print(n, '\n')
             i += 1
         return sum(n)
 
 
 if __name__ == '__main__':
     print(Solution().romanToInt('MCMXCIV'))
+    print(Solution().romanToInt('LVIII'))
+    print(Solution().romanToInt('III'))
