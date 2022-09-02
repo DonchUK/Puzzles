@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# https://acmp.ru/index.asp?main=task&id_task=77
+
 import sys
 
 
