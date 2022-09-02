@@ -6,7 +6,6 @@ class Solution:
         i = 0
         while i < len(s):
             if i < len(s) - 1:
-                # if
                 if roman_numbers[s[i]] > roman_numbers[s[i + 1]]:
                     n.append(roman_numbers[s[i]])
                 elif roman_numbers[s[i]] < roman_numbers[s[i + 1]]:
